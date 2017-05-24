@@ -1,0 +1,42 @@
+<section class="container">
+    <h1>Angular2 Bootstrap Modal</h1>
+    <hr>
+
+    <h2>Assignent 10.2</h2>
+    <hr>
+    <p>
+        
+        <button type="button" class="btn btn-default" (click)="modal.open('sm')">Click Here</button>
+    </p>
+    <br />
+
+  
+
+    <h2>Output</h2>
+    <pre>{{ output }}</pre>
+
+    <modal [animation]="animation" [keyboard]="keyboard" [backdrop]="backdrop" (onClose)="closed()" (onDismiss)="dismissed()"
+        (onOpen)="opened()" [cssClass]="cssClass" #modal  >
+        <modal-header [show-close]="true">
+            <h4 class="modal-title">I'm a modal!</h4>
+        </modal-header>
+        <modal-body>
+        
+
+            <ul class="nav nav-tabs" role="tablist">
+            <li><h3>Content</h3></li>
+                <!--<li *ngFor="let item of items">
+<a href="#" (click)="$event.preventDefault();selected = item">{{ item }}</a>
+                </li>!-->
+            </ul>
+            
+            <!-- Tab panes -->
+                    <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" >{{context}}
+                    </div>
+                    </div>
+        </modal-body>
+        <modal-footer [show-default-buttons]="true"></modal-footer>
+    </modal>
+
+</section>
